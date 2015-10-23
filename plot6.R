@@ -20,5 +20,5 @@ png("plot6.png",width=480,height=480,units="px",bg="transparent")
 ggplot(dfAggregate, aes(year, totalEmissions, color = city)) +
     geom_line(stat = "summary", fun.y = "sum") +
     ylab(expression('Total PM'[2.5]*" emissions")) +
-    ggtitle("Comparison of total emissions From Motor\n Vehicle Sources in Baltimore City\n and Los Angeles County from 1999 to 2008") 
+    ggtitle("Comparison of total emissions from motor vehicle sources\n in Baltimore City\n and Los Angeles County from 1999 to 2008") 
 dev.off()
