@@ -1,5 +1,5 @@
 # Exploratory Data Analysis
-# Peer Assignement 2
+# Peer Assignment 2
 # Oct-2015
 # plot2.R
 
@@ -8,8 +8,10 @@ source("LoadData.R")
 # Question 2
 # Have total emissions from PM2.5 decreased in the Baltimore City, Maryland (fips == "24510") 
 # from 1999 to 2008? Use the base plotting system to make a plot answering this question.
+# Prepare dataframe
 dfAggregate = ddply(dfNEI[dfNEI$fips=="24510",], c("year"), summarize, totalEmissions = sum(Emissions))
 dfAggregate
+# Plot
 png("plot2.png",width=480,height=480,units="px",bg="transparent")
 barplot((dfAggregate$totalEmissions)/10^3, 
         names.arg=dfAggregate$year,

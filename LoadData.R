@@ -1,5 +1,5 @@
 # Exploratory Data Analysis
-# Peer Assignement 2
+# Peer Assignment 2
 # Oct-2015
 # LoadData.R
 
@@ -12,5 +12,5 @@ library(plyr)
 library(ggplot2)
 
 # Loading data
-dfNEI <- readRDS("data/summarySCC_PM25.rds")
-dfSCC <- readRDS("data/Source_Classification_Code.rds")
+dfNEI = readRDS("data/summarySCC_PM25.rds")
+dfSCC = readRDS("data/Source_Classification_Code.rds")

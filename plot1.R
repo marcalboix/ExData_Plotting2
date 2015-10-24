@@ -1,5 +1,5 @@
 # Exploratory Data Analysis
-# Peer Assignement 2
+# Peer Assignment 2
 # Oct-2015
 # plot1.R
 
@@ -10,9 +10,8 @@ source("LoadData.R")
 # Using the base plotting system, make a plot showing the total PM2.5 emission from all sources 
 # for each of the years 1999, 2002, 2005, and 2008.
 # Prepare dataframe
-dfAggregate <- ddply(dfNEI, c("year"), summarize, totalEmissions = sum(Emissions))
-dfAggregate
-# Plotting
+dfAggregate = ddply(dfNEI, c("year"), summarize, totalEmissions = sum(Emissions))
+# Plot
 png("plot1.png",width=480,height=480,units="px",bg="transparent")
 barplot((dfAggregate$totalEmissions)/10^6, 
         names.arg=dfAggregate$year,
